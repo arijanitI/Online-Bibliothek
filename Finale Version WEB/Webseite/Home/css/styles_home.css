@@ -1,0 +1,236 @@
+/* ***********************************************************************************************
+   Grundlegende Stileinstellungen für die gesamte Seite
+   *********************************************************************************************** */
+
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../bilder/img.jpg'); /* Pfad zum Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ***********************************************************************************************
+   Header-Stile
+   *********************************************************************************************** */
+
+.header {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(51, 51, 51, 0.8); /* Hintergrundfarbe mit Transparenz */
+    color: #fff;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* ***********************************************************************************************
+   Navigation-Stile
+   *********************************************************************************************** */
+
+#navigation {
+    background-color: rgba(68, 68, 68, 0.8); /* Hintergrundfarbe mit Transparenz */
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background-color: rgba(85, 85, 85, 0.8); /* Hintergrundfarbe mit Transparenz */
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    margin: 0.5em;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn i {
+    margin-right: 0.5em;
+}
+
+.nav-btn:hover {
+    background-color: rgba(102, 102, 102, 0.8); /* Hintergrundfarbe mit Transparenz */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-input {
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+#search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000; /* Damit es über anderen Elementen bleibt */
+}
+
+.search-result-category {
+    font-weight: bold;
+    margin: 0.5em 0 0.2em 0;
+    padding-left: 0.5em;
+}
+
+.search-result-item {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* ***********************************************************************************************
+   Textbereich-Stile
+   *********************************************************************************************** */
+
+.text-area {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+    width: 80%;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Hintergrundfarbe mit Transparenz */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.welcome-text {
+    font-size: 1.5em;
+    color: #333; /* Textfarbe */
+}
+
+/* ***********************************************************************************************
+   Footer-Stile
+   *********************************************************************************************** */
+
+.footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Hintergrundfarbe mit Transparenz */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.support-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+.support-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ***********************************************************************************************
+   Popup-Stile
+   *********************************************************************************************** */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}

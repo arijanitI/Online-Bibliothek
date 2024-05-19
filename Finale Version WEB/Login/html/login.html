@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Bibliothek</title>
+    <link rel="stylesheet" href="../css/styles_login.css">
+    <script defer src="../js/login.js"></script>
+</head>
+<body>
+
+    <!-- ***********************************************************************************************
+         Header
+         *********************************************************************************************** -->
+    <header class="header">
+        <h1 class="header-title">Online Bibliothek</h1>
+    </header>
+
+    <!-- ***********************************************************************************************
+         Login-Container
+         *********************************************************************************************** -->
+    <div class="login-container">
+        <!-- Login-Formular -->
+        <form class="login-form">
+            <!-- Formular Titel -->
+            <h2 class="login-title">Willkommen!</h2>
+
+            <!-- Benutzername Eingabefeld -->
+            <div class="form-group">
+                <label for="username" class="form-label">Benutzername</label>
+                <input type="text" id="username" name="username" class="form-input" required>
+            </div>
+
+            <!-- Passwort Eingabefeld -->
+            <div class="form-group">
+                <label for="password" class="form-label">Passwort</label>
+                <input type="password" id="password" name="password" class="form-input" required>
+            </div>
+
+            <!-- "Merken" Checkbox und "Passwort vergessen" Link -->
+            <div class="form-group form-remember">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember" class="form-checkbox">
+                    <label for="remember" class="form-label-remember">Merken</label>
+                </div>
+                <a href="password_reset.html" class="form-link">Passwort vergessen?</a>
+            </div>
+
+            <!-- Anmelden Button -->
+            <button type="submit" class="form-button">Anmelden</button>
+
+            <!-- Registrieren Link -->
+            <p class="form-text">Noch kein Konto? <a href="register.html" class="form-link">Registrieren</a></p>
+        </form>
+    </div>
+
+    <!-- ***********************************************************************************************
+         Footer
+         *********************************************************************************************** -->
+    <footer class="footer">
+        <p>© 2024 Online-Bibliothek. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>

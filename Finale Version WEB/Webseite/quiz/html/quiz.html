@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/styles_quiz.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Quiz</h1>
+    </header>
+    <nav id="navigation">
+        <div id="nav-buttons">
+            <button class="nav-btn" onclick="location.href='../../Home/html/home.html'"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <button class="nav-btn" onclick="location.href='../../Buecher/html/buecher.html'"><i class="fa fa-book" aria-hidden="true"></i> Bücher</button>
+            <button class="nav-btn" onclick="location.href='../../Software/html/software.html'"><i class="fa fa-cogs" aria-hidden="true"></i> Software</button>
+            <button class="nav-btn" onclick="location.href='../../Info/html/info.html'"><i class="fa fa-info-circle" aria-hidden="true"></i> Info</button>
+            <button class="nav-btn" onclick="location.href='../../Benutzer/html/benutzer.html'"><i class="fa fa-user" aria-hidden="true"></i> Benutzer</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Suchen nach Modul-ID...">
+            <div id="search-results"></div>
+        </div>
+    </nav>
+    <div class="content-container">
+        <div class="list-container">
+            <h2>Übungen</h2>
+            <div id="uebungen-container" class="modules-container"></div>
+        </div>
+        <div class="list-container">
+            <h2>Tests</h2>
+            <div id="tests-container" class="modules-container"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2024 Online-Bibliothek. Alle Rechte vorbehalten.</p>
+        <button class="support-btn" onclick="openSupportPopup()">Support</button>
+    </footer>
+
+    <!-- Quiz Popup -->
+    <div id="quiz-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeQuizPopup()">&times;</span>
+            <h2 id="module-title">Modul - Titel</h2>
+            <button id="uebung-btn" class="module-btn" onclick="startQuiz('uebung')">Übung starten</button>
+            <button id="test-btn" class="module-btn" onclick="startQuiz('test')">Test starten</button>
+            <div id="progress-container" class="progress-container">
+                <h3>Fortschritt: <span id="progress-percentage">0%</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actual Quiz Popup -->
+    <div id="actual-quiz-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeActualQuizPopup()">&times;</span>
+            <h2 id="quiz-module-title">Modul - Titel</h2>
+            <form id="quiz-form">
+                <div id="quiz-questions-container"></div>
+                <button type="submit">Quiz abschließen</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Support Popup -->
+    <div id="support-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeSupportPopup()">&times;</span>
+            <h2>Support-Anfrage</h2>
+            <form>
+                <div class="form-group">
+                    <label for="support-name">Name:</label>
+                    <input type="text" id="support-name" name="support-name">
+                </div>
+                <div class="form-group">
+                    <label for="support-email">E-Mail:</label>
+                    <input type="email" id="support-email" name="support-email">
+                </div>
+                <div class="form-group">
+                    <label for="support-subject">Betreff:</label>
+                    <input type="text" id="support-subject" name="support-subject">
+                </div>
+                <div class="form-group">
+                    <label for="support-description">Beschreibung:</label>
+                    <textarea id="support-description" name="support-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="support-file">Bild hochladen:</label>
+                    <input type="file" id="support-file" name="support-file">
+                </div>
+                <button type="button" onclick="sendSupportRequest()">Senden</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
